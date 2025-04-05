@@ -1,0 +1,11 @@
+<!-- product_list.html -->
+<h1>Browse Items to Buy</h1>
+<ul>
+  {% for product in products %}
+    <li>
+      <strong>{{ product.name }}</strong><br>
+      ₹{{ product.price }}<br>
+      <a href="{% url 'product_detail' product.id %}">View Details</a>
+    </li>
+  {% endfor %}
+</ul>

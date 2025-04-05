@@ -1,0 +1,9 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Product Name" required>
+    <textarea name="description" placeholder="Description" required></textarea>
+    <input type="number" name="price" placeholder="Price" required>
+    <input type="file" name="image" required>
+    <button type="submit">Sell</button>
+</form>
+<a href="{% url 'marketplace' %}">Back to Marketplace</a>
